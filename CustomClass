@@ -1,0 +1,67 @@
+/** CustomClass
+ *  @author Tong Pang CMPSC221
+ */
+
+public class Main 
+{
+  
+  public static void main(String[] args)
+  {
+    Chatbot baymax = new Chatbot();
+  
+    baymax.introduction(); 
+    baymax.rateMe();
+    baymax.deactiveOperation();
+  }
+  
+}
+
+///////////////////////////////////////////////////////
+
+class Chatbot
+{
+    // state (properties)
+    public String myName;
+    public int painRate;
+    public int myRate;
+    public int deactConfirm;
+
+    public Chatbot()
+    {
+      String myName = "Violet";
+      painRate = 1;
+      myRate = 10;
+      deactConfirm = 1;
+    }
+    
+    // behaviors (methods)
+    public void introduction()
+    {
+      System.out.println("Hi I am Baymax, your personal healthcare companion.");
+      System.out.println("I detected your rate of pain is "+ painRate + ".");
+    }
+
+    public void rateMe()
+    {
+      System.out.println("From 1 to 10, Please rate my service.");
+      System.out.println("Rate: " + myRate);
+      
+    } 
+    
+    public void deactiveOperation()
+    {
+      System.out.println("To deactive me, please type 1 to confirm you're satified with your care.");
+      
+      if(deactConfirm == 1)
+      {
+        System.out.println("Deactivation successful.");
+      }
+      else
+      {
+        System.out.println("Deactivation unsuccessful.");
+      }
+      
+    }
+
+
+}
